@@ -7,8 +7,8 @@ import retrofit2.http.Header
 
 interface CatApiRetrofitInterface {
 
-    @GET("/images/search?limit=90&mime_types=jpg")
+    @GET("/v1/images/search?limit=30&mime_types=jpg")
     abstract fun getCat(
-        @Header("x-api-key") apiKey: String
+        @Header("X-Api-Key") apiKey: String
     ): Call<List<Cat>>
 }
